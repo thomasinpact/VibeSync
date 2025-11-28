@@ -28,32 +28,11 @@ export const PandaMoodIcon = ({ mood, size = 'md', selected = false }: PandaMood
       }`}
       style={{ backgroundColor: moodData.color }}
     >
-      <div
-        className={`${pandaSize[size]} bg-white rounded-full flex items-center justify-center`}
-        style={{
-          width: size === 'lg' ? '90px' : size === 'md' ? '60px' : '36px',
-          height: size === 'lg' ? '90px' : size === 'md' ? '60px' : '36px',
-          border: `3px solid ${moodData.color}`
-        }}
-      >
-        <svg viewBox="0 0 100 100" className="w-full h-full p-2">
-          <circle cx="20" cy="35" r="12" fill="black" />
-          <circle cx="80" cy="35" r="12" fill="black" />
-
-          <circle cx="35" cy="50" r="5" fill="black" />
-          <circle cx="65" cy="50" r="5" fill="black" />
-
-          <path
-            d="M 40 65 Q 50 75 60 65"
-            stroke="black"
-            strokeWidth="3"
-            fill="none"
-            strokeLinecap="round"
-          />
-
-          <ellipse cx="50" cy="57" rx="5" ry="6" fill="black" />
-        </svg>
-      </div>
+      <img
+        src="/src/assets/Image 28-11-2025 à 11.46.jpg"
+        alt="Panda mood"
+        className="w-full h-full rounded-full object-cover"
+      />
     </div>
   );
 };
