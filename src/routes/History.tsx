@@ -35,7 +35,7 @@ export const History = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 pb-24">
+    <div className="min-h-screen bg-dark-background pb-24">
       <Header title="Historique" />
 
       <div className="pt-20 px-6">
@@ -45,8 +45,8 @@ export const History = () => {
               onClick={() => setSelectedFilter('all')}
               className={`px-4 py-2 rounded-full font-semibold whitespace-nowrap transition-all flex items-center gap-2 ${
                 selectedFilter === 'all'
-                  ? 'bg-black text-white'
-                  : 'bg-white text-gray-700 hover:bg-gray-50'
+                  ? 'bg-white text-black'
+                  : 'bg-dark-surface text-gray-300 hover:bg-dark-border border border-dark-border'
               }`}
               style={{ fontFamily: 'Quicksand, sans-serif' }}
             >
@@ -59,8 +59,8 @@ export const History = () => {
                 onClick={() => setSelectedFilter(mood)}
                 className={`px-4 py-2 rounded-full font-semibold whitespace-nowrap transition-all ${
                   selectedFilter === mood
-                    ? 'bg-black text-white'
-                    : 'bg-white text-gray-700 hover:bg-gray-50'
+                    ? 'bg-white text-black'
+                    : 'bg-dark-surface text-gray-300 hover:bg-dark-border border border-dark-border'
                 }`}
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
               >
@@ -71,16 +71,16 @@ export const History = () => {
 
           {filteredHistory.length === 0 ? (
             <div className="text-center py-16 space-y-4">
-              <Calendar className="w-16 h-16 mx-auto text-gray-400" />
+              <Calendar className="w-16 h-16 mx-auto text-gray-600" />
               <div>
                 <h3
-                  className="text-xl font-bold text-gray-700"
+                  className="text-xl font-bold text-gray-300"
                   style={{ fontFamily: 'Hangout, sans-serif' }}
                 >
                   Aucun historique
                 </h3>
                 <p
-                  className="text-gray-500 mt-2"
+                  className="text-gray-400 mt-2"
                   style={{ fontFamily: 'Quicksand, sans-serif' }}
                 >
                   {selectedFilter === 'all'
@@ -96,7 +96,7 @@ export const History = () => {
                 return (
                   <div
                     key={entry.id}
-                    className="bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow"
+                    className="bg-dark-surface rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow border border-dark-border"
                   >
                     <div className="flex items-start gap-4">
                       <PandaMoodIcon mood={entry.mood as MoodType} size="sm" />
@@ -113,7 +113,7 @@ export const History = () => {
                           )}
                         </div>
                         <p
-                          className="text-gray-600 text-sm mb-2"
+                          className="text-gray-400 text-sm mb-2"
                           style={{ fontFamily: 'Quicksand, sans-serif' }}
                         >
                           {entry.artistName}

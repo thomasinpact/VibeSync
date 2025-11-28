@@ -22,14 +22,14 @@ export const Mood = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 pb-24">
+    <div className="min-h-screen bg-dark-background pb-24">
       <Header title="Comment te sens-tu ?" />
 
       <div className="pt-20 px-6">
         <div className="max-w-2xl mx-auto space-y-8">
           <div className="text-center space-y-2 mb-8">
             <p
-              className="text-lg text-gray-600"
+              className="text-lg text-gray-400"
               style={{ fontFamily: 'Quicksand, sans-serif' }}
             >
               Choisis ton humeur du moment
@@ -42,7 +42,7 @@ export const Mood = () => {
             <div className="pt-8 animate-fade-in">
               <button
                 onClick={handleConfirm}
-                className="w-full py-4 px-6 bg-black text-white rounded-full font-bold text-lg hover:bg-gray-800 transition-all hover:scale-105 active:scale-95 shadow-lg"
+                className="w-full py-4 px-6 bg-white text-black rounded-full font-bold text-lg hover:bg-gray-200 transition-all hover:scale-105 active:scale-95 shadow-lg"
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
               >
                 Découvrir ma musique

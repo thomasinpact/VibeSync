@@ -54,8 +54,7 @@ export const Result = () => {
 
   return (
     <div
-      className="min-h-screen pb-24 transition-colors duration-500"
-      style={{ backgroundColor: `${moodData.color}10` }}
+      className="min-h-screen pb-24 transition-colors duration-500 bg-dark-background"
     >
       <Header showBack />
 
@@ -73,7 +72,7 @@ export const Result = () => {
                 {moodData.name}
               </h2>
               <p
-                className="text-gray-600"
+                className="text-gray-400"
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
               >
                 Voici ta musique du jour
@@ -87,10 +86,10 @@ export const Result = () => {
             <button
               onClick={handleLike}
               disabled={liked}
-              className={`flex-1 py-3 px-6 rounded-full font-bold transition-all flex items-center justify-center gap-2 ${
+              className={`flex-1 py-3 px-6 rounded-full font-bold transition-all flex items-center justify-center gap-2 border ${
                 liked
-                  ? 'bg-green-500 text-white'
-                  : 'bg-white text-black hover:bg-gray-50 hover:scale-105'
+                  ? 'bg-green-500 text-white border-green-500'
+                  : 'bg-dark-surface text-white hover:bg-dark-border hover:scale-105 border-dark-border'
               }`}
               style={{ fontFamily: 'Quicksand, sans-serif' }}
             >
@@ -100,7 +99,7 @@ export const Result = () => {
 
             <button
               onClick={handleRefresh}
-              className="flex-1 py-3 px-6 bg-white text-black rounded-full font-bold hover:bg-gray-50 transition-all hover:scale-105 flex items-center justify-center gap-2"
+              className="flex-1 py-3 px-6 bg-dark-surface text-white rounded-full font-bold hover:bg-dark-border transition-all hover:scale-105 flex items-center justify-center gap-2 border border-dark-border"
               style={{ fontFamily: 'Quicksand, sans-serif' }}
             >
               <RefreshCw className="w-5 h-5" />

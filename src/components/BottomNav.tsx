@@ -7,12 +7,12 @@ export const BottomNav = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50">
+    <nav className="fixed bottom-0 left-0 right-0 bg-dark-surface border-t border-dark-border z-50">
       <div className="flex justify-around items-center py-3">
         <Link
           to="/"
           className={`flex flex-col items-center gap-1 px-6 py-2 rounded-lg transition-colors ${
-            isActive('/') ? 'text-black' : 'text-gray-400'
+            isActive('/') ? 'text-white' : 'text-gray-500'
           }`}
         >
           <Home className="w-6 h-6" />
@@ -24,7 +24,7 @@ export const BottomNav = () => {
         <Link
           to="/mood"
           className={`flex flex-col items-center gap-1 px-6 py-2 rounded-lg transition-colors ${
-            isActive('/mood') ? 'text-black' : 'text-gray-400'
+            isActive('/mood') ? 'text-white' : 'text-gray-500'
           }`}
         >
           <Smile className="w-6 h-6" />
@@ -36,7 +36,7 @@ export const BottomNav = () => {
         <Link
           to="/history"
           className={`flex flex-col items-center gap-1 px-6 py-2 rounded-lg transition-colors ${
-            isActive('/history') ? 'text-black' : 'text-gray-400'
+            isActive('/history') ? 'text-white' : 'text-gray-500'
           }`}
         >
           <History className="w-6 h-6" />

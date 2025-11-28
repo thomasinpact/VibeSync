@@ -10,11 +10,11 @@ export const Header = ({ title, showBack = false }: HeaderProps) => {
   const navigate = useNavigate();
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white z-50 px-6 py-4 flex items-center justify-between border-b border-gray-200">
+    <header className="fixed top-0 left-0 right-0 bg-dark-surface z-50 px-6 py-4 flex items-center justify-between border-b border-dark-border">
       {showBack ? (
         <button
           onClick={() => navigate(-1)}
-          className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-100 transition-colors"
+          className="flex items-center justify-center w-10 h-10 rounded-full hover:bg-dark-border transition-colors text-white"
         >
           <ArrowLeft className="w-6 h-6" />
         </button>

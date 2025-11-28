@@ -37,7 +37,7 @@ export const Onboarding = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 pb-20">
+    <div className="min-h-screen bg-dark-background pb-20">
       <Header title="Profil Musical" showBack />
 
       <div className="pt-20 px-6">
@@ -45,9 +45,9 @@ export const Onboarding = () => {
           <div className="text-center space-y-2">
             <div className="flex justify-center mb-4">
               {step === 1 ? (
-                <Music2 className="w-12 h-12 text-black" />
+                <Music2 className="w-12 h-12 text-white" />
               ) : (
-                <User className="w-12 h-12 text-black" />
+                <User className="w-12 h-12 text-white" />
               )}
             </div>
             <h2
@@ -57,7 +57,7 @@ export const Onboarding = () => {
               {step === 1 ? 'Tes genres préférés' : 'Tes artistes favoris'}
             </h2>
             <p
-              className="text-gray-600"
+              className="text-gray-400"
               style={{ fontFamily: 'Quicksand, sans-serif' }}
             >
               {step === 1
@@ -75,8 +75,8 @@ export const Onboarding = () => {
                     onClick={() => toggleGenre(genre)}
                     className={`py-3 px-4 rounded-xl font-semibold transition-all ${
                       selectedGenres.includes(genre)
-                        ? 'bg-black text-white scale-105'
-                        : 'bg-white text-gray-700 hover:bg-gray-50'
+                        ? 'bg-white text-black scale-105'
+                        : 'bg-dark-surface text-gray-300 hover:bg-dark-border border border-dark-border'
                     }`}
                     style={{ fontFamily: 'Quicksand, sans-serif' }}
                   >
@@ -88,7 +88,7 @@ export const Onboarding = () => {
               <button
                 onClick={() => setStep(2)}
                 disabled={selectedGenres.length < 3}
-                className="w-full py-4 px-6 bg-black text-white rounded-full font-bold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-800 transition-all"
+                className="w-full py-4 px-6 bg-white text-black rounded-full font-bold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-200 transition-all"
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
               >
                 Suivant ({selectedGenres.length}/3)
@@ -100,14 +100,14 @@ export const Onboarding = () => {
                 value={artists}
                 onChange={(e) => setArtists(e.target.value)}
                 placeholder="Ex: Daft Punk, Angèle, The Weeknd"
-                className="w-full p-4 rounded-xl border-2 border-gray-200 focus:border-black outline-none resize-none h-32"
+                className="w-full p-4 rounded-xl border-2 border-dark-border bg-dark-surface text-white placeholder-gray-500 focus:border-white outline-none resize-none h-32"
                 style={{ fontFamily: 'Quicksand, sans-serif' }}
               />
 
               <div className="flex gap-3">
                 <button
                   onClick={() => setStep(1)}
-                  className="flex-1 py-4 px-6 bg-gray-200 text-black rounded-full font-bold hover:bg-gray-300 transition-all"
+                  className="flex-1 py-4 px-6 bg-dark-surface text-white rounded-full font-bold hover:bg-dark-border transition-all border border-dark-border"
                   style={{ fontFamily: 'Quicksand, sans-serif' }}
                 >
                   Retour
@@ -115,7 +115,7 @@ export const Onboarding = () => {
                 <button
                   onClick={handleComplete}
                   disabled={artists.trim().length === 0}
-                  className="flex-1 py-4 px-6 bg-black text-white rounded-full font-bold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-800 transition-all"
+                  className="flex-1 py-4 px-6 bg-white text-black rounded-full font-bold disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-200 transition-all"
                   style={{ fontFamily: 'Quicksand, sans-serif' }}
                 >
                   Terminer
