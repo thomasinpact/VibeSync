@@ -29,9 +29,9 @@ export const PandaMoodIcon = ({ mood, size = 'md', selected = false }: PandaMood
       style={{ backgroundColor: moodData.color }}
     >
       <img
-        src="/src/assets/Image 28-11-2025 à 11.46.jpg"
+        src="/src/assets/panda-icon.svg"
         alt="Panda mood"
-        className="w-full h-full rounded-full object-cover"
+        className="w-full h-full rounded-full object-contain p-2"
       />
     </div>
   );
