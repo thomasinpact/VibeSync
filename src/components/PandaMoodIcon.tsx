@@ -21,7 +21,18 @@ export const PandaMoodIcon = ({ mood, size = 'md', selected = false }: PandaMood
     lg: 'text-6xl'
   };
 
-  const pandaImage = mood === 'happy' ? '/src/assets/2.png' : '/src/assets/7.png';
+  const getPandaImage = () => {
+    switch (mood) {
+      case 'happy':
+        return '/src/assets/2.png';
+      case 'focused':
+        return '/src/assets/8.png';
+      default:
+        return '/src/assets/7.png';
+    }
+  };
+
+  const pandaImage = getPandaImage();
 
   return (
     <div
