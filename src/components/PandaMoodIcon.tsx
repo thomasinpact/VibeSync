@@ -21,6 +21,8 @@ export const PandaMoodIcon = ({ mood, size = 'md', selected = false }: PandaMood
     lg: 'text-6xl'
   };
 
+  const pandaImage = mood === 'happy' ? '/src/assets/2.png' : '/src/assets/7.png';
+
   return (
     <div
       className={`${sizeClasses[size]} rounded-full flex items-center justify-center transition-all duration-300 ${
@@ -28,11 +30,13 @@ export const PandaMoodIcon = ({ mood, size = 'md', selected = false }: PandaMood
       }`}
       style={{ backgroundColor: moodData.color }}
     >
-      <img
-        src="/src/assets/panda-icon.svg"
-        alt="Panda mood"
-        className="w-full h-full rounded-full object-contain p-2"
-      />
+      <div className="w-full h-full rounded-full bg-white flex items-center justify-center p-1">
+        <img
+          src={pandaImage}
+          alt="Panda mood"
+          className="w-full h-full object-contain"
+        />
+      </div>
     </div>
   );
 };
